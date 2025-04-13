@@ -1,0 +1,8 @@
+{
+  "name": "@react-client-monorepo/portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "portfolio"
+  }
+}
