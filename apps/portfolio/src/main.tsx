@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './app/app';
 
 // Use basename only in production and when it's provided through BASE_HREF
-const basename = process.env['NODE_ENV'] === 'production' ? '/react-client-monorepo' : '/';
+const basename = '/';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

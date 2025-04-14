@@ -9,7 +9,7 @@ const baseHref = process.env.BASE_HREF || '/';
 module.exports = {
   output: {
     path: join(__dirname, '../../dist/apps/portfolio'),
-    publicPath: process.env.NODE_ENV === 'production' ? '/react-client-monorepo/' : '/',
+    publicPath: '/',
   },
   devServer: {
     port: 4200,

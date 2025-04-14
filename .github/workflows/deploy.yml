@@ -38,3 +38,4 @@ jobs:
         with:
           folder: dist/apps/portfolio
           branch: gh-pages
+          cname: hareeshd.dev
