@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_react_client_monorepo_portfolio=self.webpackChunk_react_client_monorepo_portfolio||[]).push([[869],{197:()=>{}},o=>{var e;e=197,o(o.s=e)}]);
