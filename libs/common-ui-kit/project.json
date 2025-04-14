@@ -1,0 +1,23 @@
+{
+  "name": "common-ui-kit",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/common-ui-kit/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/common-ui-kit",
+        "main": "libs/common-ui-kit/src/index.ts",
+        "tsConfig": "libs/common-ui-kit/tsconfig.lib.json",
+        "assets": ["libs/common-ui-kit/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}

@@ -1,24 +1,42 @@
+import { Section } from '@react-client-monorepo/common-ui-kit';
+import { 
+  Banner, 
+  Contact,
+  Education, 
+  WorkExperience, 
+  Projects, 
+  Skills, 
+  selectResume 
+} from '@react-client-monorepo/portfolio-ui-kit';
+import { useSelector } from 'react-redux';
+import styles from './app.module.scss';
+
 export function App() {
+  const resume = useSelector(selectResume);
+
+  if (!resume) {
+    return <div>Loading...</div>;
+  }
+
+  const currentJob = resume.workExperience[0]; // Most recent job
+
   return (
-    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-      <header style={{ marginBottom: '2rem', textAlign: 'center' }}>
-        <h1 style={{ color: '#2563eb', fontSize: '2.5rem' }}>Welcome to hareeshd.dev</h1>
-      </header>
-      <main>
-        <section style={{ marginBottom: '2rem', textAlign: 'center' }}>
-          <h2 style={{ color: '#4b5563', fontSize: '1.8rem' }}>Software Engineer</h2>
-          <p style={{ color: '#6b7280', fontSize: '1.2rem', lineHeight: 1.6 }}>
-            I'm passionate about building modern web applications using React, TypeScript, and cutting-edge technologies.
-            Currently working on exciting projects and always eager to learn new things.
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <Contact />
+        <Section>
+          <h2>{currentJob.title} at {currentJob.company}</h2>
+          <p>
+            Experienced software engineer with more than 5 years of experience specializing in {resume.skills.webTechnologies.slice(0, 3).join(', ')}, 
+            and {resume.skills.programmingLanguages.slice(0, 3).join(', ')}. 
+            Currently working at {currentJob.company}, focused on building scalable and modern web applications.
           </p>
-        </section>
-        <section style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <p style={{ color: '#6b7280' }}>
-            <span role="img" aria-label="Construction sign">🚧</span>
-            {' Portfolio under construction - Check back soon for more updates! '}
-            <span role="img" aria-label="Construction sign">🚧</span>
-          </p>
-        </section>
+        </Section>
+        <Banner />
+        <WorkExperience experiences={resume.workExperience} />
+        <Education education={resume.education} />
+        <Projects projects={resume.projects} />
+        <Skills skills={resume.skills} />
       </main>
     </div>
   );

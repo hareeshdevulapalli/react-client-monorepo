@@ -8,6 +8,12 @@
     },
     {
       "path": "./apps/portfolio"
+    },
+    {
+      "path": "./libs/common-ui-kit"
+    },
+    {
+      "path": "./libs/portfolio-ui-kit"
     }
   ]
 }

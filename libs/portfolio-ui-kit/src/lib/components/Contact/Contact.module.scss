@@ -1,0 +1,34 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #2563eb;
+  }
+}
+
+.icon {
+  font-style: normal;
+  font-size: 1.1rem;
+}

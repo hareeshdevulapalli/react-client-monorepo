@@ -1,0 +1,17 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f0f9ff;
+  border: 1px dashed #0ea5e9;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  
+  p {
+    color: #0369a1;
+    font-weight: 500;
+    margin: 0;
+  }
+}
