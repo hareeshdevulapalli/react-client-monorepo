@@ -2,7 +2,14 @@
   "name": "@react-client-monorepo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve portfolio",
+    "build": "nx build portfolio",
+    "build:gh-pages": "NODE_ENV=production nx build portfolio",
+    "test": "nx test portfolio",
+    "lint": "nx lint portfolio",
+    "e2e": "nx e2e portfolio-e2e"
+  },
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
