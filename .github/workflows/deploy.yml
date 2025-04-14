@@ -25,7 +25,9 @@ jobs:
           npm install --legacy-peer-deps
 
       - name: Build
-        run: npx nx build portfolio --base-href="/${{ github.event.repository.name }}/"
+        env:
+          BASE_HREF: "/${{ github.event.repository.name }}/"
+        run: npx nx build portfolio
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
