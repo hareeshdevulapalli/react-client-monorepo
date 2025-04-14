@@ -9,7 +9,7 @@ const baseHref = process.env.BASE_HREF || '/';
 module.exports = {
   output: {
     path: join(__dirname, '../../dist/apps/portfolio'),
-    publicPath: '/',
+    publicPath: 'auto',
   },
   devServer: {
     port: 4200,
@@ -25,7 +25,7 @@ module.exports = {
       compiler: 'babel',
       main: './src/main.tsx',
       index: './src/index.html',
-      baseHref: baseHref,
+      baseHref: '/',
       assets: ['./src/favicon.ico', './src/assets'],
       styles: ['./src/styles.scss'],
       outputHashing: process.env['NODE_ENV'] === 'production' ? 'all' : 'none',

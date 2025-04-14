@@ -31,7 +31,9 @@ jobs:
           npm install --legacy-peer-deps
 
       - name: Build
-        run: NODE_ENV=production npx nx build portfolio
+        run: |
+          npx nx build portfolio
+          cp dist/apps/portfolio/index.html dist/apps/portfolio/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
