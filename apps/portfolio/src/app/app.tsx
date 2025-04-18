@@ -24,6 +24,7 @@ export function App() {
     <div className={styles.container}>
       <main className={styles.main}>
         <Contact />
+        <h1 className={styles.name}>Hareesh Devulapalli</h1>
         <Section>
           <h2>{currentJob.title} at {currentJob.company}</h2>
           <p>
